@@ -1,7 +1,7 @@
 'use client';
-export const dynamic = "force-dynamic";
 
-import { useEffect, useState, useMemo, useCallback } from 'react';
+// 1. Add Suspense to imports
+import { useEffect, useState, useMemo, useCallback, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Layout from '@/components/Layout';
 import { getCurrentUser, getDonations, getFoodItems, addDonation, updateDonation, getUserById } from '@/lib/storage';
@@ -13,7 +13,8 @@ interface ItemWithML extends FoodItem {
   mlPredictions?: MLPrediction;
 }
 
-export default function RestaurantDonationsPage() {
+// 2. This is now the "Inner" component containing your logic
+function DonationContent() {
   const [donations, setDonations] = useState<Donation[]>([]);
   const [items, setItems] = useState<ItemWithML[]>([]);
   const [mlAvailable, setMlAvailable] = useState(false);
@@ -27,6 +28,7 @@ export default function RestaurantDonationsPage() {
     pickup_location: '',
     pickup_notes: '',
   });
+  
   const searchParams = useSearchParams();
 
   useEffect(() => {
@@ -47,7 +49,6 @@ export default function RestaurantDonationsPage() {
     const user = getCurrentUser();
     if (user) {
       const userItems = getFoodItems(user.id);
-      // Preserve existing ML predictions when reloading
       setItems(prevItems => {
         return userItems.map(item => {
           const existingItem = prevItems.find(i => i.id === item.id);
@@ -96,17 +97,14 @@ export default function RestaurantDonationsPage() {
         })
       ).then(predictions => {
         setItems(prevItems => {
-          // Get fresh items from storage to ensure we have latest data
           const freshItems = getFoodItems(user.id) as ItemWithML[];
           
           const updated = freshItems.map(item => {
-            // Preserve existing ML predictions first
             const existing = prevItems.find(i => i.id === item.id);
             if (existing && existing.mlPredictions) {
               return { ...item, mlPredictions: existing.mlPredictions };
             }
             
-            // Add new predictions from results
             const result = predictions.find(p => p && p.itemId === item.id);
             if (result && result.prediction) {
               return { ...item, mlPredictions: result.prediction };
@@ -127,17 +125,15 @@ export default function RestaurantDonationsPage() {
     });
   }, [mlLoading]);
 
-  // Track items needing ML predictions
   const itemsNeedingMLCount = useMemo(() => {
     return items.filter(item => (item.status === 'active' || item.status === 'expiring_soon') && !item.mlPredictions).length;
   }, [items]);
 
   useEffect(() => {
-    // Load ML predictions when ML becomes available
     if (mlAvailable && items.length > 0 && !mlLoading && itemsNeedingMLCount > 0) {
       loadMLPredictions();
     }
-  }, [mlAvailable, items.length, itemsNeedingMLCount, loadMLPredictions]); // Track count of items needing ML
+  }, [mlAvailable, items.length, itemsNeedingMLCount, loadMLPredictions]);
 
   const loadDonations = () => {
     const user = getCurrentUser();
@@ -151,12 +147,10 @@ export default function RestaurantDonationsPage() {
     if (!user || !selectedFoodItem) return;
 
     if (!showPickupForm) {
-      // First step: show pickup form
       setShowPickupForm(true);
       return;
     }
 
-    // Second step: create donation with pickup info
     const donation = addDonation(selectedFoodItem, user.id);
     if (donation && (pickupInfo.pickup_date || pickupInfo.pickup_location)) {
       updateDonation(donation.id, {
@@ -177,17 +171,7 @@ export default function RestaurantDonationsPage() {
       pickup_notes: '',
     });
     loadDonations();
-    loadItems(); // Reload items to update state
-  };
-
-  const handleAcceptRequest = (donationId: string, ngoId: string) => {
-    updateDonation(donationId, { status: 'accepted', ngo_id: ngoId });
-    loadDonations();
-  };
-
-  const handleRejectRequest = (donationId: string) => {
-    updateDonation(donationId, { status: 'rejected' });
-    loadDonations();
+    loadItems();
   };
 
   const handleCompleteDonation = (donationId: string) => {
@@ -207,17 +191,15 @@ export default function RestaurantDonationsPage() {
 
   const user = getCurrentUser();
   
-  // Create a dependency string that changes when ML predictions are added/updated
   const mlPredictionsKey = items
     .filter(i => i.status === 'active' || i.status === 'expiring_soon')
     .map(i => i.id + (i.mlPredictions ? ':' + JSON.stringify(i.mlPredictions) : ':none'))
     .join('|');
   
-  // Use centralized recommendation system - NO FALLBACKS
   const availableItems = useMemo(() => {
     if (!user) return [];
     return getAvailableDonationItems(items, user.id, mlAvailable);
-  }, [items, mlAvailable, user, donations, mlPredictionsKey]); // Use ML predictions key to trigger recalculation
+  }, [items, mlAvailable, user, donations, mlPredictionsKey]);
 
   return (
     <Layout>
@@ -335,7 +317,6 @@ export default function RestaurantDonationsPage() {
         )}
       </div>
 
-      {/* Create Donation Modal */}
       {showCreateModal && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-2xl p-6 w-full max-w-md shadow-2xl border border-gray-200">
@@ -460,4 +441,11 @@ export default function RestaurantDonationsPage() {
   );
 }
 
-
+// 3. This is the New Default Export that satisfies Vercel
+export default function RestaurantDonationsPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+      <DonationContent />
+    </Suspense>
+  );
+}
