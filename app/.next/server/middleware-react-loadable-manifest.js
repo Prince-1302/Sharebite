@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"app\\\\restaurant\\\\page.tsx -> @/lib/storage\":{\"id\":\"app\\\\restaurant\\\\page.tsx -> @/lib/storage\",\"files\":[]}}"
