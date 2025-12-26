@@ -1,0 +1,52 @@
+ARJUNA - QUICK START GUIDE
+===========================
+
+PREREQUISITES
+-------------
+1. Node.js (v18+) and npm installed
+2. Python (v3.8+) and pip installed
+3. Git (optional, if cloning from repository)
+
+
+ML API SETUP
+-----------------------
+1. Navigate to ml directory:
+   cd ml
+
+2. Install Python dependencies:
+   pip install -r requirements.txt
+
+3. Train models (first time only):
+   python train_models.py
+   
+
+4. Start ML API server:
+   python ml_api.py
+   
+   ML API will run on http://localhost:5000
+
+
+FRONTEND SETUP
+--------------
+1. Install dependencies:
+   npm install
+
+3. Start development server:
+   npm run dev
+   
+   Application will be available at http://localhost:3000
+
+
+frontend : Node.js / JavaScript (React/Next.js)
+backend : Python (Flask/FastAPI + ML Libraries)
+database : Zero Backend Dependency:
+
+The project is designed to operate entirely on the client side.
+Quote from README: "Arjuna operates entirely on browser-based local storage, eliminating the need for complex backend infrastructure."
+How Data is Stored:
+
+Data is saved directly in your web browser's memory (Local Storage) as JSON strings.
+It uses specific "keys" to organize data, such as:
+sharebite_users (for login info)
+sharebite_food_items (for inventory)
+sharebite_donations (for donation records)
