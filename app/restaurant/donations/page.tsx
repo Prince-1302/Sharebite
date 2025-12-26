@@ -1,6 +1,8 @@
 'use client';
 
-// 1. Add Suspense to imports
+// 1. THIS COMMANDS VERCEL TO SKIP STATIC BUILD FOR THIS PAGE
+export const dynamic = "force-dynamic";
+
 import { useEffect, useState, useMemo, useCallback, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Layout from '@/components/Layout';
@@ -13,7 +15,7 @@ interface ItemWithML extends FoodItem {
   mlPredictions?: MLPrediction;
 }
 
-// 2. This is now the "Inner" component containing your logic
+// 2. The Logic Component
 function DonationContent() {
   const [donations, setDonations] = useState<Donation[]>([]);
   const [items, setItems] = useState<ItemWithML[]>([]);
@@ -441,7 +443,7 @@ function DonationContent() {
   );
 }
 
-// 3. This is the New Default Export that satisfies Vercel
+// 3. The Wrapper
 export default function RestaurantDonationsPage() {
   return (
     <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
