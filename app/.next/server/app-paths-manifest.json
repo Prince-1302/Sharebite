@@ -1,7 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/ngo/page": "app/ngo/page.js",
-  "/ngo/requests/page": "app/ngo/requests/page.js",
-  "/admin/page": "app/admin/page.js",
-  "/admin/completed-donations/page": "app/admin/completed-donations/page.js"
-}
