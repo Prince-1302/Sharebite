@@ -1,3 +1,16 @@
+// app/restaurant/donations/page.tsx
+
+export const dynamic = "force-dynamic"; // <--- Add this line
+
+import { useSearchParams } from 'next/navigation';
+// other imports...
+
+export default function DonationsPage() {
+  // ... your existing code
+}
+
+
+
 'use client';
 
 import { useEffect, useState } from 'react';
