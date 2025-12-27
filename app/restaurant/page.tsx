@@ -531,7 +531,7 @@ export default function RestaurantInventoryPage() {
                     
                     {/* Actions */}
                     <div className="flex justify-end items-center gap-2">
-                      {item.status === 'active' && (
+                      {(item.status === 'active'|| item.status ==='expiring_soon') && (
                         <>
                           <button
                             onClick={() => handleMarkConsumed(item.id)}
