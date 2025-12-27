@@ -8,10 +8,10 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
-# 1. CORS: Allow everyone (Crucial for Vercel)
+# 1. CORS: Allow everyone (Crucial for Vercel connection)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-# 2. Load Model (Optional - we will use logic if model fails)
+# 2. Load Model (Optional - we uses Logic Mode if file is missing)
 MODEL_PATH = 'food_waste_model.pkl'
 model = None
 
@@ -37,6 +37,7 @@ def calculate_days_diff(date_str):
 
 @app.route('/health', methods=['GET'])
 def health():
+    # Matches exactly what your frontend expects for the Green Badge
     return jsonify({
         "status": "ML API is running",
         "models_loaded": True 
@@ -64,24 +65,37 @@ def predict_all():
         days_until_expiry = calculate_days_diff(data.get('expiry_date', ''))
         category = data.get('category', 'General')
         
-        # --- LOGIC ENGINE ---
+        # --- SMARTER LOGIC ENGINE ---
         
         # 1. Expiration Logic
         predicted_expiry = max(1, days_until_expiry)
         
-        # 2. Waste Risk Logic (Updated thresholds so you see alerts more often)
+        # 2. Waste Risk Logic
         risk_score = 0.0
-        if days_until_expiry < 5: risk_score += 0.5  # Warn if < 5 days
-        if quantity > 5: risk_score += 0.4           # Warn if > 5 items
+        if days_until_expiry < 5: risk_score += 0.5
+        if quantity > 5: risk_score += 0.4
         if category in ['Dairy', 'Meat']: risk_score += 0.2
         
         risk_level = "Low"
         if risk_score > 0.7: risk_level = "High"
         elif risk_score > 0.4: risk_level = "Medium"
 
-        # 3. Donation Logic (Donate if valid quantity and not expired)
-        should_donate = (days_until_expiry >= 2) and (quantity > 2)
-        donation_prob = 0.95 if should_donate else 0.15
+        # 3. Donation Logic (SMART VERSION)
+        # Rule: Must have at least 2 days life AND at least 2 quantity
+        is_fresh_enough = (days_until_expiry >= 2)
+        has_enough_food = (quantity >= 2)
+        
+        should_donate = is_fresh_enough and has_enough_food
+        
+        # dynamic Probability (Partial Credit)
+        if should_donate:
+            donation_prob = 0.95  # Perfect match!
+        elif is_fresh_enough: 
+            # Fresh but too small amount -> 45% (Better than rotten!)
+            donation_prob = 0.45  
+        else:
+            # Expired -> 15% (Bad!)
+            donation_prob = 0.15
 
         # 4. Priority Logic
         priority_score = risk_score * 100
@@ -104,7 +118,7 @@ def predict_all():
         print(f"Error: {e}")
         return jsonify({"success": False, "error": str(e)}), 400
 
-# --- FIX 2: ADD RECIPE ENDPOINT (Solves the 404/403 Error) ---
+# --- FIX 2: RECIPE ENDPOINT (For Landing Page) ---
 
 @app.route('/api/recipe', methods=['POST'])
 def generate_recipe():
@@ -153,4 +167,3 @@ def expiration(): return predict_all()
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 10000))
     app.run(host='0.0.0.0', port=port)
-    
