@@ -27,7 +27,7 @@ except Exception as e:
 @app.route('/health', methods=['GET'])
 def health():
     return jsonify({
-        "status": "ML API Online",
+       "status": "ML API is running",
         "model_loaded": model is not None
     }), 200
 
