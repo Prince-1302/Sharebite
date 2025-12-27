@@ -9,7 +9,7 @@ export async function checkMLAPIHealth(): Promise<boolean> {
       headers: { 'Content-Type': 'application/json' },
     });
     const data = await response.json();
-    return data.status === 'healthy' && data.models_loaded;
+    return data.status === 'ML API is running';
   } catch (error) {
     return false;
   }
