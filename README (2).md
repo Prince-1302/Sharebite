@@ -1,4 +1,4 @@
-# Arjuna - Comprehensive Food Waste Management Platform
+# ShareBite- Comprehensive Food Waste Management Platform
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
@@ -17,9 +17,9 @@
 
 ## Project Overview
 
-**Arjuna** is a state-of-the-art, comprehensive food waste management platform that revolutionizes how restaurants, non-governmental organizations (NGOs), and administrators collaborate to combat food waste. Built with modern web technologies and powered by machine learning, Arjuna creates a seamless ecosystem where surplus food is efficiently redirected from waste streams to those in need, while providing actionable insights and measurable environmental impact.
+**ShareBite** is a state-of-the-art, comprehensive food waste management platform that revolutionizes how restaurants, non-governmental organizations (NGOs), and administrators collaborate to combat food waste. Built with modern web technologies and powered by machine learning, ShareBite creates a seamless ecosystem where surplus food is efficiently redirected from waste streams to those in need, while providing actionable insights and measurable environmental impact.
 
-The platform serves as a digital bridge connecting three critical stakeholders: restaurant owners who generate surplus food, NGOs that distribute food to communities, and administrators who oversee and optimize the entire system. Through intelligent automation, real-time tracking, and data-driven recommendations, Arjuna transforms food waste management from a reactive process into a proactive, strategic initiative.
+The platform serves as a digital bridge connecting three critical stakeholders: restaurant owners who generate surplus food, NGOs that distribute food to communities, and administrators who oversee and optimize the entire system. Through intelligent automation, real-time tracking, and data-driven recommendations, ShareBite transforms food waste management from a reactive process into a proactive, strategic initiative.
 
 ---
 
@@ -36,19 +36,19 @@ To become the leading global platform for food waste reduction, where every surp
 ## Unique Selling Points
 
 ### 1. **Intelligent Machine Learning Integration**
-Arjuna stands apart through its sophisticated ML-powered prediction system that goes beyond simple rule-based recommendations. The platform employs four specialized machine learning models that analyze food items from multiple dimensions, providing accurate expiration predictions, waste risk assessments, donation recommendations, and priority scoring. This AI-driven approach ensures that restaurants receive actionable insights based on data patterns rather than static rules.
+ShareBite stands apart through its sophisticated ML-powered prediction system that goes beyond simple rule-based recommendations. The platform employs four specialized machine learning models that analyze food items from multiple dimensions, providing accurate expiration predictions, waste risk assessments, donation recommendations, and priority scoring. This AI-driven approach ensures that restaurants receive actionable insights based on data patterns rather than static rules.
 
 ### 2. **Comprehensive Stakeholder Ecosystem**
-Unlike platforms that focus on a single user type, Arjuna creates a complete ecosystem where restaurants, NGOs, and administrators work in harmony. Each stakeholder has a dedicated, feature-rich dashboard tailored to their specific needs, creating a seamless flow from food surplus identification to community distribution.
+Unlike platforms that focus on a single user type, ShareBite creates a complete ecosystem where restaurants, NGOs, and administrators work in harmony. Each stakeholder has a dedicated, feature-rich dashboard tailored to their specific needs, creating a seamless flow from food surplus identification to community distribution.
 
 ### 3. **Real-Time Impact Tracking**
 The platform provides granular, real-time tracking of environmental impact. Every action—whether consuming food before expiration or donating to NGOs—is automatically calculated and visualized, showing waste saved in kilograms, carbon footprint reduction, meals provided, and people served. This transparency motivates continued participation and demonstrates tangible results.
 
 ### 4. **Dual Donation and Disposal Systems**
-Arjuna uniquely addresses both viable food donations and expired item disposal. The platform separates regular donations (for consumable items) from disposal requests (for expired items), ensuring NGOs can effectively manage both scenarios without cluttering the donation system. This dual approach maximizes resource utilization and minimizes waste.
+ShareBite uniquely addresses both viable food donations and expired item disposal. The platform separates regular donations (for consumable items) from disposal requests (for expired items), ensuring NGOs can effectively manage both scenarios without cluttering the donation system. This dual approach maximizes resource utilization and minimizes waste.
 
 ### 5. **Gamified Rewards System**
-To incentivize restaurants, Arjuna implements a sophisticated rewards point system. Restaurants earn points based on donation quantity, with a minimum guarantee per donation. These points can be redeemed for various rewards, creating a positive feedback loop that encourages continued participation in waste reduction efforts.
+To incentivize restaurants, ShareBite implements a sophisticated rewards point system. Restaurants earn points based on donation quantity, with a minimum guarantee per donation. These points can be redeemed for various rewards, creating a positive feedback loop that encourages continued participation in waste reduction efforts.
 
 ### 6. **Quality Assurance Through Completion Reports**
 The platform ensures accountability through a comprehensive completion report system. NGOs must submit detailed questionnaires with photographic evidence when completing donations, which administrators review to rate NGO performance. This quality control mechanism maintains trust and ensures food reaches those in need effectively.
@@ -57,13 +57,13 @@ The platform ensures accountability through a comprehensive completion report sy
 Administrators can rate NGOs based on completion reports, creating a transparent quality metric visible to all stakeholders. This rating system helps restaurants make informed decisions about which NGOs to work with and motivates NGOs to maintain high standards of service delivery.
 
 ### 8. **Seamless User Experience**
-Built with modern web technologies, Arjuna provides a responsive, intuitive interface that works seamlessly across devices. The platform features real-time updates, automatic status calculations, and intelligent notifications that keep all stakeholders informed without overwhelming them.
+Built with modern web technologies, ShareBite provides a responsive, intuitive interface that works seamlessly across devices. The platform features real-time updates, automatic status calculations, and intelligent notifications that keep all stakeholders informed without overwhelming them.
 
 ### 9. **Zero Backend Dependency**
-Arjuna operates entirely on browser-based local storage, eliminating the need for complex backend infrastructure. This approach ensures data privacy, reduces operational costs, and allows for rapid deployment while maintaining full functionality across all features.
+ShareBite operates entirely on browser-based local storage, eliminating the need for complex backend infrastructure. This approach ensures data privacy, reduces operational costs, and allows for rapid deployment while maintaining full functionality across all features.
 
 ### 10. **AI-Powered Recipe Helper**
-Beyond waste management, Arjuna includes an innovative recipe helper feature powered by Google Gemini AI. Users can input leftover food items and receive creative recipe suggestions, extending the platform's value to home users and further reducing food waste at the consumer level.
+Beyond waste management, ShareBite includes an innovative recipe helper feature powered by Google Gemini AI. Users can input leftover food items and receive creative recipe suggestions, extending the platform's value to home users and further reducing food waste at the consumer level.
 
 ---
 
@@ -72,13 +72,13 @@ Beyond waste management, Arjuna includes an innovative recipe helper feature pow
 ### Restaurant Owners
 
 #### Overview
-Restaurant owners are the primary food generators in the Arjuna ecosystem. They use the platform to manage inventory, prevent waste, donate surplus food, and track their environmental impact. The platform transforms inventory management from a manual, error-prone process into an intelligent, automated system.
+Restaurant owners are the primary food generators in the ShareBite ecosystem. They use the platform to manage inventory, prevent waste, donate surplus food, and track their environmental impact. The platform transforms inventory management from a manual, error-prone process into an intelligent, automated system.
 
 #### Key Pain Points Addressed
-- **Inventory Tracking Complexity**: Manual tracking of food items with varying expiry dates is time-consuming and error-prone. Arjuna automates this process with intelligent status calculations and visual indicators.
+- **Inventory Tracking Complexity**: Manual tracking of food items with varying expiry dates is time-consuming and error-prone. ShareBite automates this process with intelligent status calculations and visual indicators.
 - **Waste Prevention**: Restaurants struggle to identify items at risk of expiration before it's too late. The platform provides proactive alerts and recommendations.
-- **Donation Coordination**: Finding appropriate recipients for surplus food requires significant effort. Arjuna connects restaurants directly with NGOs.
-- **Impact Measurement**: Restaurants want to measure their environmental contribution but lack tools to do so. Arjuna provides comprehensive analytics and carbon footprint calculations.
+- **Donation Coordination**: Finding appropriate recipients for surplus food requires significant effort. ShareBite connects restaurants directly with NGOs.
+- **Impact Measurement**: Restaurants want to measure their environmental contribution but lack tools to do so. ShareBite provides comprehensive analytics and carbon footprint calculations.
 
 #### Complete Feature Set
 
@@ -98,12 +98,12 @@ The donation management interface allows restaurants to create donation requests
 Restaurants can view all their donations in a comprehensive dashboard showing status (pending, accepted, completed, rejected), assigned NGO information, pickup details, and completion status. When an NGO accepts a donation, restaurants receive notifications and can see the NGO's rating, helping them make informed decisions. The system tracks the entire donation lifecycle from creation to completion.
 
 **Disposal Request Management**
-For expired food items that cannot be donated, Arjuna provides a separate disposal request system. Restaurants can mark expired items for disposal, which creates requests visible to NGOs in a dedicated disposal section. This separation ensures that viable donations and disposal requests don't mix, maintaining clarity in the system.
+For expired food items that cannot be donated, ShareBite provides a separate disposal request system. Restaurants can mark expired items for disposal, which creates requests visible to NGOs in a dedicated disposal section. This separation ensures that viable donations and disposal requests don't mix, maintaining clarity in the system.
 
 The disposal dashboard shows all disposal requests with their status, assigned NGO (if accepted), and completion status. Restaurants can track which expired items have been properly disposed of, ensuring compliance with waste management regulations.
 
 **Rewards and Incentives Program**
-To motivate continued participation, Arjuna implements a comprehensive rewards system. Restaurants earn reward points for each completed donation, calculated as 10 points per kilogram of food donated, with a minimum of 10 points per donation regardless of quantity. This ensures even small donations are recognized.
+To motivate continued participation, ShareBite implements a comprehensive rewards system. Restaurants earn reward points for each completed donation, calculated as 10 points per kilogram of food donated, with a minimum of 10 points per donation regardless of quantity. This ensures even small donations are recognized.
 
 The rewards dashboard displays total accumulated points, redemption history, and available reward options. Restaurants can redeem points for various rewards including discount vouchers, certificates of recognition, merchandise, or custom rewards. Each redemption request is tracked with status (pending, approved, rejected), and points are deducted upon submission, with refunds provided if requests are rejected.
 
@@ -123,12 +123,12 @@ When viewing donations, restaurants can see the rating of NGOs that have accepte
 ### Non-Governmental Organizations (NGOs)
 
 #### Overview
-NGOs are the distribution partners in the Arjuna ecosystem, receiving food donations from restaurants and distributing them to communities in need. The platform provides NGOs with tools to discover available donations, manage requests, track impact, and maintain quality standards.
+NGOs are the distribution partners in the ShareBite ecosystem, receiving food donations from restaurants and distributing them to communities in need. The platform provides NGOs with tools to discover available donations, manage requests, track impact, and maintain quality standards.
 
 #### Key Pain Points Addressed
-- **Donation Discovery**: NGOs struggle to find reliable sources of food donations. Arjuna provides a centralized marketplace of available donations.
+- **Donation Discovery**: NGOs struggle to find reliable sources of food donations. ShareBite provides a centralized marketplace of available donations.
 - **Request Management**: Tracking multiple donation requests across different restaurants is challenging. The platform consolidates all requests in one dashboard.
-- **Impact Documentation**: NGOs need to demonstrate their impact to stakeholders. Arjuna provides comprehensive impact metrics and reporting.
+- **Impact Documentation**: NGOs need to demonstrate their impact to stakeholders. ShareBite provides comprehensive impact metrics and reporting.
 - **Quality Assurance**: NGOs must maintain high standards to continue receiving donations. The rating system motivates quality service delivery.
 
 #### Complete Feature Set
@@ -172,10 +172,10 @@ When viewing donations, NGOs can see comprehensive restaurant information includ
 ### Administrators
 
 #### Overview
-Administrators are the overseers and optimizers of the Arjuna platform. They monitor platform health, manage users, review completion reports, rate NGOs, and analyze platform-wide metrics to ensure optimal system performance.
+Administrators are the overseers and optimizers of the ShareBite platform. They monitor platform health, manage users, review completion reports, rate NGOs, and analyze platform-wide metrics to ensure optimal system performance.
 
 #### Key Pain Points Addressed
-- **Platform Monitoring**: Administrators need visibility into overall platform health and activity. Arjuna provides comprehensive dashboards.
+- **Platform Monitoring**: Administrators need visibility into overall platform health and activity. ShareBite provides comprehensive dashboards.
 - **Quality Control**: Ensuring NGOs maintain high standards requires review mechanisms. The completion report and rating system addresses this.
 - **User Management**: Managing multiple user accounts across different roles is complex. The platform provides centralized user management.
 - **Impact Measurement**: Demonstrating platform-wide impact requires aggregation of data. Analytics dashboards provide this capability.
@@ -219,7 +219,7 @@ This review process creates a feedback loop where NGOs receive recognition for q
 ### Core Platform Features
 
 **Multi-Role Authentication System**
-Arjuna implements a comprehensive authentication system supporting three distinct user roles: restaurant owners, NGOs, and administrators. Each role has dedicated login credentials and access to role-specific features. The system maintains session state using browser local storage, ensuring users remain logged in across page refreshes.
+ShareBite implements a comprehensive authentication system supporting three distinct user roles: restaurant owners, NGOs, and administrators. Each role has dedicated login credentials and access to role-specific features. The system maintains session state using browser local storage, ensuring users remain logged in across page refreshes.
 
 **Role-Based Navigation**
 The platform features intelligent navigation that adapts based on user role. Restaurant owners see links to Inventory, Donations, Disposal, Rewards, and Analytics. NGOs see links to Discover, My Requests, Disposal, and Impact. Administrators see links to Dashboard, Users, Completed Donations, and Analytics. This role-based navigation ensures users only see relevant features, reducing complexity and improving user experience.
@@ -279,7 +279,7 @@ The platform includes integration with Google Gemini AI for recipe suggestions. 
 ### Frontend Architecture
 
 **Next.js 14 with App Router**
-Arjuna is built on Next.js 14, utilizing the modern App Router architecture. This provides server-side rendering capabilities, optimized performance, and a file-based routing system. The App Router enables code splitting, automatic route optimization, and improved developer experience.
+ShareBite is built on Next.js 14, utilizing the modern App Router architecture. This provides server-side rendering capabilities, optimized performance, and a file-based routing system. The App Router enables code splitting, automatic route optimization, and improved developer experience.
 
 **TypeScript Implementation**
 The entire codebase is written in TypeScript, providing type safety, improved code quality, and enhanced developer experience. Type definitions are centralized in a types file, ensuring consistency across the application. TypeScript helps catch errors at compile time, reducing runtime issues and improving maintainability.
@@ -302,7 +302,7 @@ Next.js API routes handle external API integrations, specifically the Google Gem
 ### Data Storage Architecture
 
 **Browser Local Storage Strategy**
-Arjuna uses browser local storage as its primary data persistence mechanism. This approach eliminates the need for backend infrastructure while maintaining data persistence across sessions. Data is organized into separate storage keys for different entity types: users, food items, donations, notifications, analytics, completion reports, disposal requests, and reward redemptions.
+ShareBite uses browser local storage as its primary data persistence mechanism. This approach eliminates the need for backend infrastructure while maintaining data persistence across sessions. Data is organized into separate storage keys for different entity types: users, food items, donations, notifications, analytics, completion reports, disposal requests, and reward redemptions.
 
 **Storage Key Organization**
 Each entity type has a dedicated storage key, ensuring data isolation and easy management. Storage operations are abstracted through utility functions that handle serialization, deserialization, and error handling. This abstraction allows for potential future migration to a backend database without changing application code.
@@ -349,7 +349,7 @@ Local storage acts as a cache, reducing the need for repeated data fetches. The 
 ## Machine Learning Implementation
 
 ### Overview
-Arjuna incorporates a sophisticated machine learning system that enhances food waste management through predictive analytics. The ML implementation consists of four specialized models that work together to provide comprehensive insights into food items, enabling proactive waste prevention and optimal donation decisions.
+ShareBite incorporates a sophisticated machine learning system that enhances food waste management through predictive analytics. The ML implementation consists of four specialized models that work together to provide comprehensive insights into food items, enabling proactive waste prevention and optimal donation decisions.
 
 ### ML System Architecture
 
@@ -604,7 +604,7 @@ The rating system creates a continuous feedback loop. NGOs are motivated to main
 
 ### Prerequisites
 
-Before setting up Arjuna, ensure you have the following installed on your system:
+Before setting up ShareBite, ensure you have the following installed on your system:
 
 - **Node.js** (version 18 or higher) - Required for running the Next.js frontend
 - **npm** or **yarn** - Package manager for installing dependencies
@@ -618,7 +618,7 @@ Before setting up Arjuna, ensure you have the following installed on your system
 If you have the project in a Git repository, clone it to your local machine:
 ```bash
 git clone <repository-url>
-cd Arjuna
+cd ShareBite
 ```
 
 Alternatively, if you have the project files, navigate to the project directory.
@@ -764,7 +764,7 @@ If deploying the ML API, ensure:
 
 ### Data Storage Architecture
 
-Arjuna uses browser local storage as its primary data persistence mechanism. This approach provides several advantages including data privacy, zero backend infrastructure requirements, and rapid deployment capabilities.
+ShareBite uses browser local storage as its primary data persistence mechanism. This approach provides several advantages including data privacy, zero backend infrastructure requirements, and rapid deployment capabilities.
 
 ### Storage Keys and Organization
 
@@ -1134,4 +1134,4 @@ Exploring cutting-edge solutions:
 
 ---
 
-This comprehensive documentation provides a complete overview of the Arjuna platform, from its mission and features to technical implementation and future possibilities. The platform represents a holistic approach to food waste management, combining technology, collaboration, and data-driven insights to create meaningful environmental and social impact.
+This comprehensive documentation provides a complete overview of the ShareBite platform, from its mission and features to technical implementation and future possibilities. The platform represents a holistic approach to food waste management, combining technology, collaboration, and data-driven insights to create meaningful environmental and social impact.
