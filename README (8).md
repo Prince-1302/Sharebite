@@ -6,7 +6,7 @@ A full-stack platform that connects **restaurants**, **NGOs** and **administrato
 
 | Tag | Meaning |
 |---|---|
-| ✅ | Verified directly in source code, dataset or model artifacts |
+| ✅ | Verified directly in source code, dataset or model artifacts|
 | 🔁 | Reproduced by re-running the repo's own scripts on the repo's own data |
 | ⚠️ | Verified, but with an important caveat |
 | ❓ | NOT VERIFIED — described in earlier docs, but the source was not available for audit |
